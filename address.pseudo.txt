@@ -1,0 +1,29 @@
+BEGIN 
+	CLASS Address
+        // Assign variables as strings
+        STRING firstName
+        STRING lastName
+        STRING streetAddress
+        STRING city
+        STRING zipCode
+
+        // Assign input values to variables
+        PRINT "What is your first name?"
+        ASSIGN firstName = INPUT
+        PRINT "What is your last name?"
+        ASSIGN lastName = INPUT
+        PRINT "What is your street address?"
+        ASSIGN streetAddress = INPUT
+        PRINT "What city do you live in?"
+        ASSIGN city = INPUT
+        PRINT "What is your zip code?"
+        ASSIGN zipCode = INPUT
+
+        // Display the data
+        PRINT "First Name: " + firstName
+        PRINT "Last Name: " + lastName
+        PRINT "Street Address: " + streetAddress
+        PRINT "City: " + city
+        PRINT "Zip Code: " + zipCode
+    END CLASS
+END
