@@ -1,0 +1,33 @@
+//Jeremy Carney, CSC320, Dr. Dong Nguyen, 02/02/2025
+
+BEGIN 
+    CLASS TaxRate
+        // Assign variables
+        INTEGER wIncome
+        DOUBLE tRate
+        DOUBLE avgTax
+
+        // Prompt for user input
+        PRINT "Please provide your weekly income to calculate the average tax withholding:"
+        ASSIGN wIncome = INPUT
+
+        // Determine tax rate based on weekly income
+        IF wIncome < 500 THEN
+            ASSIGN tRate = 0.10
+        ELSE IF wIncome < 1500 THEN
+            ASSIGN tRate = 0.15
+        ELSE IF wIncome < 2500 THEN
+            ASSIGN tRate = 0.20
+        ELSE
+            ASSIGN tRate = 0.30
+        END IF
+
+        // Calculate the average tax withholding
+        ASSIGN avgTax = wIncome * tRate
+
+        // Output the results
+        PRINT "For an income of $" + wIncome + ", your tax rate is " + (tRate * 100) + "%."
+        PRINT "Your average tax withholding is $" + avgTax + "."
+
+    END CLASS
+END
