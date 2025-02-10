@@ -1,0 +1,19 @@
+Initialize variables: total, count, max, min.
+
+Use a while loop to read five floating-point values.
+
+Inside the loop:
+
+    Read user input.
+
+    Add value to the total.
+
+    Update max and min.
+
+    Increment the count.
+
+Calculate average.
+
+Calculate interest on the total at 20%.
+
+Print total, average, max, min, and interest.
