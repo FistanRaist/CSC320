@@ -1,0 +1,29 @@
+START
+DECLARE arrayDays
+DECLARE arrayTemps
+
+ADD days "Monday" through "Sunday" to arrayDays
+
+FOR each day IN arrayDays
+    PROMPT "Enter temperature for day"
+    READ temperature
+    ADD temperature to arrayTemps
+END FOR
+
+FOR each index FROM 0 TO size of arrayDays - 1
+    PRINT day at index, temperature at index
+END FOR
+
+PROMPT "Enter 'week' to see weekly average temperature"
+READ userInput
+
+IF userInput EQUALS "week"
+    SET totalTemps TO 0
+    FOR each temperature IN arrayTemps
+        ADD temperature TO totalTemps
+    END FOR
+    CALCULATE avgTemps AS totalTemps DIVIDED BY size of arrayTemps
+    PRINT "Weekly average temperature is avgTemps"
+END IF
+
+END
